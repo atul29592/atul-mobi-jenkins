@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: atul-finalapp
+  name: atul-finalapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atul-finalapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: atul-finalapp
+    spec:
+      containers:
+      - image: atul29592/atulmobiwebapp:5
+        name: atulmobiwebapp
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
